@@ -242,8 +242,8 @@ export function ApplyPageContent() {
                 <div className="mb-12 max-w-3xl mx-auto">
                     <Breadcrumbs
                         items={[
-                            { name: "Careers", url: "https://www.navagathatech.com/careers" },
-                            { name: "Apply", url: "https://www.navagathatech.com/careers/apply" }
+                            { name: "Careers", url: "https://www.navagathagroup.com/careers" },
+                            { name: "Apply", url: "https://www.navagathagroup.com/careers/apply" }
                         ]}
                     />
                 </div>

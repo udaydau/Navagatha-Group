@@ -3,19 +3,10 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ClientMotionWrapper } from "@/components/ClientMotionWrapper";
 import {
-    Code2,
-    Cpu,
-    Database,
-    Globe,
-    Layers,
-    Layout,
-    Server,
-    ShieldCheck,
-    Smartphone,
-    Zap,
-    Cloud,
-    Settings,
-    Search,
+    Anchor,
+    Ship,
+    Users,
+    Briefcase,
     CheckCircle2,
     ArrowRight
 } from "lucide-react";
@@ -24,56 +15,54 @@ import Link from "next/link";
 
 const domains = [
     {
-        title: "Enterprise Systems",
-        icon: Server,
-        desc: "Unifying global operations with robust enterprise cores and specialized business logic.",
-        techs: ["SAP S/4HANA", "SAP ECC", "ABAP Development", "Custom ERP Solutions", "Enterprise Integration"]
+        title: "Technical Management",
+        icon: Ship,
+        desc: "Ensuring vessels are maintained to the highest standards of safety and efficiency.",
+        items: ["Planned Maintenance", "Dry Docking", "Safety Inspections", "Budget & Cost Control", "Regulatory Compliance"]
     },
     {
-        title: "Digital Transformation",
-        icon: Zap,
-        desc: "Strategic modernization of legacy landscapes and adoption of high-velocity delivery models.",
-        techs: ["AS400 Modernization", "Mainframe Transition", "Legacy Refactoring", "Microservices Architecture", "API Strategy"]
+        title: "Crew Management",
+        icon: Users,
+        desc: "Recruiting and retaining competent seafarers for all vessel types.",
+        items: ["Recruitment & Selection", "Training & Development", "Payroll Management", "Crew Welfare", "Travel Logistics"]
     },
     {
-        title: "Software Innovation",
-        icon: Code2,
-        desc: "Building next-generation applications with cutting-edge tech stacks and creative design.",
-        techs: ["Next.js/React", "Go Language", "Node.js", "Flutter Mobile", "Python/AI Integrations"]
+        title: "Commercial Management",
+        icon: Briefcase,
+        desc: "Maximizing vessel earnings through strategic chartering and operations.",
+        items: ["Chartering Strategy", "Post-Fixture Operations", "Freight Collection", "Demurrage Claims", "Market Analysis"]
     },
     {
-        title: "Cloud & Reliability",
-        icon: Cloud,
-        desc: "Scalable infrastructure and automated operations for maximum uptime and developer speed.",
-        techs: ["AWS/Azure/GCP", "Kubernetes (K8s)", "Terraform (IaC)", "CI/CD Pipelines", "SRE & Monitoring"]
+        title: "Maritime Consultancy",
+        icon: Anchor,
+        desc: "Expert advice on asset management, S&P, and maritime projects.",
+        items: ["Sale & Purchase", "New Building Supervision", "Vessel Inspections", "Risk Assessment", "Maritime Audits"]
     }
 ];
 
-const technologies = [
-    { category: "Web & UI", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"] },
-    { category: "Backend & Core", items: ["Node.js", "Go", "Python", "Java", "C# .NET"] },
-    { category: "Databases", items: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "SQL Server"] },
-    { category: "Legacy & Specialized", items: ["AS400/RPG", "Mainframe/COBOL", "SAP ABAP", "Delphi", "VB6 Modernization"] },
-    { category: "Infrastructure", items: ["Docker", "Kubernetes", "AWS Lambda", "Azure Functions", "Jenkins"] }
+const vesselTypes = [
+    { category: "Tankers", items: ["Crude Oil Tankers", "Product Tankers", "Chemical Tankers"] },
+    { category: "Bulk Carriers", items: ["Handysize", "Supramax", "Panamax", "Capesize"] },
+    { category: "Gas Carriers", items: ["LPG Carriers", "LNG Carriers"] },
+    { category: "Container Ships", items: ["Feeder Vessels", "Mainliners"] },
+    { category: "Offshore", items: ["AHTS", "PSV", "OSV"] }
 ];
 
 export const metadata: Metadata = {
-    title: "Our Expertise",
-    description: "Explore our deep expertise across software technologies, platforms and domains. From legacy AS400 to modern AI and Cloud architectures.",
+    title: "Maritime Services",
+    description: "Comprehensive ship management services including technical, crewing, and commercial management.",
     keywords: [
-        "IT Expertise",
-        "Technology Stack",
-        "SAP Implementation",
-        "AS400 Modernization",
-        "Cloud Architecture",
-        "Enterprise Systems",
-        "Digital Transformation",
-        "Software Development"
+        "Technical Management",
+        "Crew Management",
+        "Commercial Management",
+        "Ship Management",
+        "Maritime Services",
+        "Vessel Management"
     ],
     openGraph: {
-        title: "Our Expertise | Navagatha Group",
-        description: "Deep expertise across Enterprise Systems, Digital Transformation, Software Innovation, and Cloud Infrastructure.",
-        url: "https://www.navagathatech.com/expertise",
+        title: "Maritime Services | Navagatha Mercantile",
+        description: "Expert technical, crewing, and commercial management for the global shipping industry.",
+        url: "https://www.navagathagroup.com/expertise",
     },
     alternates: {
         canonical: "/expertise",
@@ -90,7 +79,7 @@ export default function ExpertisePage() {
                     <div className="mb-12">
                         <Breadcrumbs
                             items={[
-                                { name: "Our Expertise", url: "https://www.navagathatech.com/expertise" }
+                                { name: "Our Services", url: "https://www.navagathagroup.com/expertise" }
                             ]}
                         />
                     </div>
@@ -102,11 +91,11 @@ export default function ExpertisePage() {
                             transition={{ duration: 0.8 }}
                         >
                             <h1 className="text-4xl md:text-7xl font-extrabold text-primary mb-8 leading-tight">
-                                Deep Expertise <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Across the Spectrum</span>
+                                Excellence in <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Maritime Services</span>
                             </h1>
                             <p className="text-lg md:text-xl text-foreground-muted leading-relaxed">
-                                We bring together the precision of legacy systems and the speed of modern innovation. Our deep domain knowledge across manufacturing, logistics, retail and fintech ensures your technology is a strategic asset.
+                                We deliver world-class ship management solutions, ensuring safety, efficiency, and profitability for vessel owners worldwide.
                             </p>
                         </ClientMotionWrapper>
                     </div>
@@ -132,9 +121,9 @@ export default function ExpertisePage() {
                                         </div>
                                     </div>
                                     <div className="flex flex-wrap gap-2">
-                                        {domain.techs.map((tech) => (
-                                            <span key={tech} className="px-3 py-1 bg-gray-50 text-primary/70 rounded-full text-xs font-bold border border-gray-100 uppercase tracking-wider">
-                                                {tech}
+                                        {domain.items.map((item) => (
+                                            <span key={item} className="px-3 py-1 bg-gray-50 text-primary/70 rounded-full text-xs font-bold border border-gray-100 uppercase tracking-wider">
+                                                {item}
                                             </span>
                                         ))}
                                     </div>
@@ -143,28 +132,28 @@ export default function ExpertisePage() {
                         </div>
                     </section>
 
-                    {/* Tech Stack Grid */}
+                    {/* Vessel Expertise Grid */}
                     <section className="py-24 bg-primary text-white rounded-[60px] relative overflow-hidden mb-32">
                         <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 translate-x-1/2" />
                         <div className="container px-12 relative z-10">
                             <div className="max-w-3xl mb-16">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Technology DNA</h2>
+                                <h2 className="text-3xl md:text-5xl font-bold mb-6">Vessel Expertise</h2>
                                 <p className="text-lg opacity-70">
-                                    We maintain active proficiency in a wide array of platforms and languages, ensuring we always pick the right tool for your specific challenge.
+                                    Our team possesses deep technical knowledge across a wide range of vessel types, ensuring tailored management strategies for every asset.
                                 </p>
                             </div>
 
                             <div className="grid md:grid-cols-5 gap-12">
-                                {technologies.map((techSet, idx) => (
+                                {vesselTypes.map((type, idx) => (
                                     <div key={idx} className="space-y-6">
                                         <h4 className="text-secondary font-bold uppercase tracking-widest text-xs border-b border-white/10 pb-4">
-                                            {techSet.category}
+                                            {type.category}
                                         </h4>
                                         <ul className="space-y-3">
-                                            {techSet.items.map((tech) => (
-                                                <li key={tech} className="flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition-opacity">
+                                            {type.items.map((item) => (
+                                                <li key={item} className="flex items-center gap-2 text-sm font-medium opacity-80 hover:opacity-100 transition-opacity">
                                                     <CheckCircle2 size={14} className="text-secondary" />
-                                                    {tech}
+                                                    {item}
                                                 </li>
                                             ))}
                                         </ul>
@@ -180,19 +169,13 @@ export default function ExpertisePage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-center"
                     >
-                        <h3 className="text-3xl font-bold text-primary mb-8">Ready to see our expertise in action?</h3>
+                        <h3 className="text-3xl font-bold text-primary mb-8">Ready to optimize your fleet?</h3>
                         <div className="flex flex-wrap justify-center gap-6">
                             <Link
-                                href="/case-studies"
+                                href="/contact"
                                 className="px-10 py-5 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 flex items-center gap-2"
                             >
-                                Browse Case Studies <ArrowRight size={20} />
-                            </Link>
-                            <Link
-                                href="/contact"
-                                className="px-10 py-5 bg-white text-primary border border-primary/10 font-bold rounded-full hover:border-primary/30 transition-all flex items-center gap-2"
-                            >
-                                Let&apos;s Discuss Your Project
+                                Contact Us <ArrowRight size={20} />
                             </Link>
                         </div>
                     </ClientMotionWrapper>

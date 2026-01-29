@@ -113,7 +113,7 @@ function ContactForm() {
                             <MapPin size={24} />
                         </div>
                         <div className="text-gray-700 leading-relaxed text-lg">
-                            <p className="font-bold text-primary mb-2">Navagatha Group Pvt. Ltd.</p>
+                            <p className="font-bold text-primary mb-2">Navagatha Mercantile Fleet Management Pvt. Ltd.</p>
                             <p>
                                 Office No. 112, A Wing, 1st Floor,<br />
                                 Crystal Plaza Premises<br />
@@ -136,7 +136,7 @@ function ContactForm() {
                         </div>
                         <div>
                             <p className="text-sm text-gray-400 font-bold uppercase tracking-wider">Mail us at</p>
-                            <p className="text-xl font-bold text-primary">info@navagathatech.com</p>
+                            <p className="text-xl font-bold text-primary">info@navagathagroup.com</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-4 group cursor-pointer">
@@ -334,7 +334,7 @@ export function ContactPageContent() {
             <div className="container mx-auto px-6 max-w-6xl pt-6">
                 <Breadcrumbs
                     items={[
-                        { name: "Contact", url: "https://www.navagathatech.com/contact" }
+                        { name: "Contact", url: "https://www.navagathagroup.com/contact" }
                     ]}
                 />
             </div>

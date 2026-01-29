@@ -16,7 +16,7 @@ interface BreadcrumbsProps {
 export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
     // Always include Home as the first item
     const allItems: BreadcrumbItem[] = [
-        { name: "Home", url: "https://www.navagathatech.com" },
+        { name: "Home", url: "https://www.navagathagroup.com" },
         ...items
     ];
 

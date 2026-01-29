@@ -7,9 +7,9 @@ import { ArrowRight, BookOpen } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Case Studies | Navagatha Group",
-    description: "Explore our success stories and see how Navagatha Group helps businesses transform their IT landscape through innovation and expertise.",
-    keywords: ["IT Case Studies", "Software Development Success Stories", "Legacy Modernization Examples", "Digital Transformation Case Studies"],
+    title: "Success Stories | Navagatha Mercantile",
+    description: "Explore our success stories and see how Navagatha Mercantile Fleet Management Pvt. Ltd. delivers excellence in ship management and maritime services.",
+    keywords: ["Maritime Case Studies", "Ship Management Success Stories", "Crewing Success", "Fleet Management Examples"],
 };
 
 export default async function CaseStudiesPage() {
@@ -24,7 +24,7 @@ export default async function CaseStudiesPage() {
                     <div className="mb-12">
                         <Breadcrumbs
                             items={[
-                                { name: "Case Studies", url: "https://www.navagathatech.com/case-studies" }
+                                { name: "Case Studies", url: "https://www.navagathagroup.com/case-studies" }
                             ]}
                         />
                     </div>
@@ -35,7 +35,7 @@ export default async function CaseStudiesPage() {
                             <span className="text-secondary text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Case Studies</span>
                         </h1>
                         <p className="text-xl text-foreground-muted leading-relaxed">
-                            Discover how we've helped global enterprises modernize their legacy systems, adopt cutting-edge AI and build future-ready application landscapes.
+                            Discover how we've helped global shipping companies optimize their fleet operations, ensure regulatory compliance and maximize commercial performance.
                         </p>
                     </div>
 
