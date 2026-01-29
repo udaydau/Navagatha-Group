@@ -1,23 +1,22 @@
 import type { Metadata } from "next";
-import { getJobPostingSchema } from "@/lib/schema";
+import { getJobPostingSchema, type Job } from "@/lib/schema";
 
 export const metadata: Metadata = {
     title: "Careers",
-    description: "Join Navagatha Tech and build the future of enterprise technology. Explore exciting career opportunities in IT services, software development, AI, cloud computing and digital transformation.",
+    description: "Join NAVAGATHA MERCANTILE FLEET MANAGEMENT PVT. LTD. Explore exciting career opportunities in Merchant Navy, Ship Management, and Crewing.",
     keywords: [
-        "Navagatha Tech Careers",
-        "IT Jobs India",
-        "Software Developer Jobs Mumbai",
-        "Technology Careers",
-        "Enterprise IT Jobs",
-        "Digital Transformation Jobs",
-        "SAP Jobs India",
-        "DevOps Engineer Jobs"
+        "Merchant Navy Jobs",
+        "Seafarer Jobs",
+        "Ship Management Careers",
+        "Crewing Jobs Mumbai",
+        "Maritime Careers",
+        "Marine Engineering Jobs",
+        "Deck Cadet Jobs"
     ],
     openGraph: {
-        title: "Careers at Navagatha Tech | Join Our Team",
-        description: "Build the future of enterprise technology with Navagatha Tech. Explore our open positions.",
-        url: "https://www.navagathatech.com/careers",
+        title: "Careers at Navagatha Mercantile | Join Our Fleet",
+        description: "Build your future at sea with Navagatha Mercantile Fleet Management.",
+        url: "https://www.navagathagroup.com/careers",
     },
     alternates: {
         canonical: "/careers",
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Briefcase, MapPin, Clock, ArrowRight, Star, Heart, Zap, Globe } from "lucide-react";
+import { Briefcase, MapPin, Clock, ArrowRight, Star, Heart, Zap, Globe, Anchor } from "lucide-react";
 import Link from "next/link";
 import { getJobs } from "@/lib/jobs";
 import { ClientMotionWrapper } from "@/components/ClientMotionWrapper";
@@ -40,28 +39,18 @@ const fadeIn = {
 };
 
 const values = [
-    { icon: Star, title: "Innovation First", desc: "We push the boundaries of what's possible with modern tech." },
-    { icon: Heart, title: "People Centric", desc: "Our lean structure ensures direct mentorship and growth." },
-    { icon: Zap, title: "Agile Growth", desc: "Rapidly evolve your skills across a diverse tech spectrum." },
-    { icon: Globe, title: "Global Impact", desc: "Work on strategic projects that transform major businesses." },
+    { icon: Star, title: "Safety First", desc: "We prioritize the safety of our crew and vessels above all else." },
+    { icon: Heart, title: "Crew Welfare", desc: "Timely wages, excellent onboard living conditions, and family support." },
+    { icon: Zap, title: "Career Growth", desc: "Clear pathways from Cadet to Master/Chief Engineer." },
+    { icon: Globe, title: "Global Sailing", desc: "Opportunities to sail on diverse vessels across international waters." },
 ];
 
 export default async function CareersPage() {
-    let jobs = [];
+    let jobs: Job[] = [];
     try {
         jobs = await getJobs();
     } catch (error) {
         console.error("Error loading jobs:", error);
-        return (
-            <div className="min-h-screen bg-background font-sans">
-                <Header />
-                <section className="pt-40 text-center px-6">
-                    <h1 className="text-3xl font-bold text-primary mb-4">Service Temporarily Unavailable</h1>
-                    <p className="text-foreground-muted">We're experiencing some technical difficulties. Please try again later.</p>
-                </section>
-                <Footer />
-            </div>
-        );
     }
 
     return (
@@ -71,11 +60,10 @@ export default async function CareersPage() {
             <section className="pt-40 pb-20 bg-primary text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent skew-x-12 translate-x-1/2" />
                 <div className="container mx-auto px-6 relative z-10">
-                    {/* Breadcrumbs */}
                     <div className="mb-8">
                         <Breadcrumbs
                             items={[
-                                { name: "Careers", url: "https://www.navagathatech.com/careers" }
+                                { name: "Careers", url: "/careers" }
                             ]}
                             className="text-white/80"
                         />
@@ -84,14 +72,14 @@ export default async function CareersPage() {
                     <div className="text-center max-w-4xl mx-auto">
                         <ClientMotionWrapper {...fadeIn}>
                             <span className="inline-block py-1 px-4 rounded-full bg-white/10 text-white border border-white/20 text-xs font-bold uppercase tracking-widest mb-6">
-                                Join Navagatha Tech
+                                Join our Fleet
                             </span>
                             <h1 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">
-                                Build the Future of <br />
-                                <span className="text-white">Enterprise Technology</span>
+                                Navigate Your Future <br />
+                                <span className="text-secondary">At Sea & Ashore</span>
                             </h1>
                             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-                                We're looking for passionate innovators, legacy experts and bold thinkers to help us transform the global IT landscape.
+                                We are looking for dedicated seafarers and maritime professionals to join our growing fleet. Excellence starts with you.
                             </p>
                         </ClientMotionWrapper>
                     </div>
@@ -102,9 +90,9 @@ export default async function CareersPage() {
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-primary mb-4">Why Navagatha?</h2>
+                        <h2 className="text-3xl font-bold text-primary mb-4">Why Sail with Navagatha?</h2>
                         <p className="text-foreground-muted max-w-2xl mx-auto">
-                            We offer a unique environment where legacy reliability meets startup-speed innovation.
+                            We offer a professional environment where seamanship and safety are valued.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-4 gap-8">
@@ -131,8 +119,8 @@ export default async function CareersPage() {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <div>
-                            <h2 className="text-3xl font-bold text-primary mb-2">Open Opportunities</h2>
-                            <p className="text-foreground-muted">Explore our current vacancies across technologies.</p>
+                            <h2 className="text-3xl font-bold text-primary mb-2">Current Openings</h2>
+                            <p className="text-foreground-muted">Explore our vacancies for Officers, Engineers, and Rating.</p>
                         </div>
                         <div className="text-sm font-semibold text-primary px-4 py-2 bg-white rounded-full border border-border">
                             {jobs.length} Positions Available
@@ -140,8 +128,7 @@ export default async function CareersPage() {
                     </div>
 
                     <div className="space-y-6">
-                        {jobs.map((job) => {
-                            // Generate JobPosting schema for each job
+                        {jobs.map((job: Job) => {
                             const jobSchema = getJobPostingSchema({
                                 id: job.id,
                                 title: job.title,
@@ -159,7 +146,6 @@ export default async function CareersPage() {
                                     {...fadeIn}
                                     className="bg-white p-8 rounded-2xl shadow-sm border border-border hover:shadow-xl hover:border-secondary/30 transition-all group"
                                 >
-                                    {/* JobPosting Schema for this job */}
                                     <script
                                         type="application/ld+json"
                                         dangerouslySetInnerHTML={{ __html: JSON.stringify(jobSchema) }}
@@ -185,10 +171,6 @@ export default async function CareersPage() {
                                                     <MapPin size={14} className="text-secondary" />
                                                     {job.location}
                                                 </div>
-                                                <div className="flex items-center gap-1.5 capitalize">
-                                                    <Clock size={14} className="text-secondary" />
-                                                    Posted recently
-                                                </div>
                                             </div>
                                         </div>
                                         <div className="flex-shrink-0">
@@ -196,7 +178,7 @@ export default async function CareersPage() {
                                                 href={`/careers/${job.slug}`}
                                                 className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold rounded-full group-hover:bg-secondary group-hover:text-primary transition-all"
                                             >
-                                                View Details <ArrowRight size={18} />
+                                                View Rank <ArrowRight size={18} />
                                             </Link>
                                         </div>
                                     </div>
@@ -212,17 +194,17 @@ export default async function CareersPage() {
                 <div className="container mx-auto px-6 max-w-3xl">
                     <ClientMotionWrapper {...fadeIn}>
                         <div className="w-20 h-20 bg-secondary/20 text-secondary rounded-full flex items-center justify-center mx-auto mb-8">
-                            <Briefcase size={36} />
+                            <Anchor size={36} />
                         </div>
-                        <h2 className="text-3xl font-bold text-primary mb-6">Don't see a fit?</h2>
+                        <h2 className="text-3xl font-bold text-primary mb-6">Join Our Sea Staff</h2>
                         <p className="text-lg text-foreground-muted mb-10 leading-relaxed">
-                            We're always growing! Send your resume to <span className="text-primary font-bold">hr@navagathatech.com</span> and we'll keep you in mind for future opportunities.
+                            Send your CV and Sea Service records to <span className="text-primary font-bold">hr@navagathagroup.com</span> for review.
                         </p>
                         <Link
                             href="/careers/apply"
                             className="px-10 py-5 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-xl shadow-primary/20"
                         >
-                            Apply for General Vacancy
+                            General Application
                         </Link>
                     </ClientMotionWrapper>
                 </div>

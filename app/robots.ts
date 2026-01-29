@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
                 ],
             },
         ],
-        sitemap: 'https://www.navagathatech.com/sitemap.xml',
+        sitemap: 'https://www.navagathagroup.com/sitemap.xml',
     }
 }

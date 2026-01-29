@@ -71,7 +71,7 @@ export const metadata: Metadata = {
         "Software Development"
     ],
     openGraph: {
-        title: "Our Expertise | Navagatha Tech",
+        title: "Our Expertise | Navagatha Group",
         description: "Deep expertise across Enterprise Systems, Digital Transformation, Software Innovation, and Cloud Infrastructure.",
         url: "https://www.navagathatech.com/expertise",
     },

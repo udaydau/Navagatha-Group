@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
-        name: 'Navagatha Tech',
+        name: 'Navagatha Mercantile Fleet Management',
         short_name: 'Navagatha',
-        description: 'Next-generation IT services and digital transformation partnership.',
+        description: 'Premier Ship Management and Crewing Services active in global maritime trade.',
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',

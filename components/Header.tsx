@@ -11,13 +11,13 @@ import { useRouter } from "next/navigation";
 const navigation = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/#about" },
-    { name: "Capabilities", href: "/#capabilities" },
     {
-        name: "Our Expertise",
+        name: "Services",
         href: "#",
         subItems: [
-            { name: "Expertise", href: "/expertise" },
-            { name: "Case Studies", href: "/case-studies" },
+            { name: "Ship Management", href: "/#services" },
+            { name: "Import/Export", href: "/#services" },
+            { name: "Chartering", href: "/#services" },
         ]
     },
     { name: "Careers", href: "/careers" },
@@ -71,7 +71,7 @@ export function Header() {
         }
     };
 
-    const isAdmin = userEmail === "hr@navagathatech.com";
+    const isAdmin = userEmail === "hr@navagathagroup.com";
 
     return (
         <header
@@ -85,7 +85,7 @@ export function Header() {
                     <div className="relative h-10 md:h-14 w-[180px] md:w-[380px] transition-all">
                         <Image
                             src="/images/logo_navagatha.png"
-                            alt="Navagatha Tech"
+                            alt="Navagatha Mercantile Fleet Management"
                             fill
                             className="object-contain object-left"
                             priority
@@ -339,7 +339,7 @@ export function Header() {
                             </Link>
 
                             <div className="mt-8 text-center text-gray-400 text-sm">
-                                <p>© 2026 Navagatha Tech Pvt. Ltd.</p>
+                                <p>© 2026 NAVAGATHA MERCANTILE FLEET MANAGEMENT PVT. LTD.</p>
                                 <p>Andheri (W), Mumbai</p>
                             </div>
                         </motion.div>

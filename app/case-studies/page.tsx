@@ -7,8 +7,8 @@ import { ArrowRight, BookOpen } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Case Studies | Navagatha Tech",
-    description: "Explore our success stories and see how Navagatha Tech helps businesses transform their IT landscape through innovation and expertise.",
+    title: "Case Studies | Navagatha Group",
+    description: "Explore our success stories and see how Navagatha Group helps businesses transform their IT landscape through innovation and expertise.",
     keywords: ["IT Case Studies", "Software Development Success Stories", "Legacy Modernization Examples", "Digital Transformation Case Studies"],
 };
 

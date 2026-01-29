@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-:root {
   /* Brand Colors */
   --primary: #0B1C3E;    /* Deep Blue from Logo Background */
   --secondary: #D4AF37;  /* Gold/Yellow from Turtle */
@@ -8,16 +7,17 @@
   
   /* Backgrounds */
   --background: #FFFFFF;
-  --background-alt: #F8FAFC; /* Slate 50 for sections */
+  --background-alt: #F8FAFC; 
+  --background-hero: #050A18; /* Dark Hero Background */
   
   /* Text */
-  --foreground: #1A202C; /* Dark Slate for main text */
-  --foreground-muted: #4A5568; /* Gray for secondary text */
+  --foreground: #1A202C; 
+  --foreground-muted: #4A5568; 
+  --foreground-light: #F7FAFC; /* Light text for dark backgrounds */
   
   /* UI Elements */
   --border: #E2E8F0;
   --radius: 0.5rem;
-}
 
 @theme inline {
   --color-primary: var(--primary);

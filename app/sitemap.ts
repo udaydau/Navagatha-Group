@@ -3,7 +3,7 @@ import { getCaseStudies } from '@/lib/case-studies'
 import { getJobs } from '@/lib/jobs'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = 'https://www.navagathatech.com'
+    const baseUrl = 'https://www.navagathagroup.com'
     const currentDate = new Date()
 
     // Fetch dynamic data

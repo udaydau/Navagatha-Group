@@ -19,8 +19,8 @@ export default function LoginPage() {
         e.preventDefault();
         setError("");
 
-        if (!email.endsWith("@navagathatech.com")) {
-            setError("Please use your official @navagathatech.com email.");
+        if (!email.endsWith("@navagathagroup.com")) {
+            setError("Please use your official @navagathagroup.com email.");
             return;
         }
 
@@ -59,7 +59,7 @@ export default function LoginPage() {
 
             const data = await res.json();
             if (res.ok) {
-                router.push(email === "hr@navagathatech.com" ? "/admin" : "/");
+                router.push(email === "hr@navagathagroup.com" ? "/admin" : "/");
                 router.refresh();
             } else {
                 setError(data.message || "Invalid OTP.");
@@ -107,7 +107,7 @@ export default function LoginPage() {
                                             <input
                                                 type="email"
                                                 required
-                                                placeholder="yourname@navagathatech.com"
+                                                placeholder="yourname@navagathagroup.com"
                                                 className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all"
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}

@@ -30,7 +30,7 @@ export interface BreadcrumbItem {
     url: string;
 }
 
-const baseUrl = 'https://www.navagathatech.com';
+const baseUrl = 'https://www.navagathagroup.com';
 
 /**
  * Enhanced Organization Schema with LocalBusiness
@@ -39,18 +39,18 @@ export function getOrganizationSchema() {
     return {
         "@context": "https://schema.org",
         "@type": ["Organization", "LocalBusiness"],
-        "name": "Navagatha Tech Pvt. Ltd.",
+        "name": "NAVAGATHA MERCANTILE FLEET MANAGEMENT PVT. LTD.",
         "url": baseUrl,
         "logo": `${baseUrl}/images/logo_navagatha.png`,
         "image": `${baseUrl}/images/logo_navagatha.png`,
-        "description": "Next-generation IT services company driven by technology innovation and reliable delivery. We specialize in application development, digital transformation, legacy modernization and enterprise solutions.",
-        "foundingDate": "2024",
-        "slogan": "Empowering Businesses Through Technology Innovation",
+        "description": "Premier Ship Management and Crewing Services active in global maritime trade.",
+        "foundingDate": "2014",
+        "slogan": "Premier Ship Management and Crewing Services",
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+91 22 45705334",
             "contactType": "customer service",
-            "email": "info@navagathatech.com",
+            "email": "info@navagathagroup.com",
             "availableLanguage": ["en", "Hindi"],
             "areaServed": "IN"
         },
@@ -68,7 +68,9 @@ export function getOrganizationSchema() {
             "longitude": "72.8267"
         },
         "sameAs": [
-            // Add social media URLs when available
+            "https://www.facebook.com/navagathagroup",
+            "https://www.linkedin.com/company/navagathagroup",
+            "https://www.instagram.com/navagathagroup"
         ],
         "areaServed": {
             "@type": "GeoCircle",
@@ -83,48 +85,48 @@ export function getOrganizationSchema() {
         "openingHours": "Mo-Fr 09:00-18:00",
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "IT Services",
+            "name": "Maritime Services",
             "itemListElement": [
                 {
                     "@type": "OfferCatalog",
-                    "name": "Application Development",
+                    "name": "Ship Management",
                     "itemListElement": [
                         {
                             "@type": "Offer",
                             "itemOffered": {
                                 "@type": "Service",
-                                "name": "Web & Mobile Development",
-                                "description": "End-to-end development of scalable web and mobile applications"
+                                "name": "Technical Management",
+                                "description": "Complete technical oversight, maintenance, and dry-docking support."
                             }
                         },
                         {
                             "@type": "Offer",
                             "itemOffered": {
                                 "@type": "Service",
-                                "name": "AI & Machine Learning",
-                                "description": "Intelligent automation and predictive analytics solutions"
+                                "name": "Crew Management",
+                                "description": "Recruitment, training, and placement of qualified seafarers."
                             }
                         }
                     ]
                 },
                 {
                     "@type": "OfferCatalog",
-                    "name": "Digital Transformation",
+                    "name": "Logistics & Commercial",
                     "itemListElement": [
                         {
                             "@type": "Offer",
                             "itemOffered": {
                                 "@type": "Service",
-                                "name": "Legacy Modernization",
-                                "description": "AS400, Mainframe and legacy system transformation"
+                                "name": "Import / Export",
+                                "description": "Global freight forwarding and cargo logistics solutions."
                             }
                         },
                         {
                             "@type": "Offer",
                             "itemOffered": {
                                 "@type": "Service",
-                                "name": "Cloud Migration",
-                                "description": "Seamless migration to cloud infrastructure"
+                                "name": "Chartering",
+                                "description": "Vessel chartering and commercial operations."
                             }
                         }
                     ]
@@ -141,12 +143,12 @@ export function getWebSiteSchema() {
     return {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Navagatha Tech",
+        "name": "Navagatha Mercantile Fleet Management",
         "url": baseUrl,
-        "description": "Next-generation IT services and digital transformation solutions",
+        "description": "Premier Ship Management and Crewing Services",
         "publisher": {
             "@type": "Organization",
-            "name": "Navagatha Tech Pvt. Ltd.",
+            "name": "NAVAGATHA MERCANTILE FLEET MANAGEMENT PVT. LTD.",
             "logo": {
                 "@type": "ImageObject",
                 "url": `${baseUrl}/images/logo_navagatha.png`
@@ -174,7 +176,7 @@ export function getServiceSchema(service: Service) {
         "description": service.description,
         "provider": {
             "@type": "Organization",
-            "name": "Navagatha Tech Pvt. Ltd.",
+            "name": "NAVAGATHA MERCANTILE FLEET MANAGEMENT PVT. LTD.",
             "url": baseUrl
         },
         "serviceType": service.category,
@@ -196,7 +198,7 @@ export function getJobPostingSchema(job: Job) {
         "description": job.description,
         "identifier": {
             "@type": "PropertyValue",
-            "name": "Navagatha Tech",
+            "name": "Navagatha Mercantile",
             "value": job.id
         },
         "datePosted": job.datePosted || new Date().toISOString(),
@@ -204,7 +206,7 @@ export function getJobPostingSchema(job: Job) {
         "employmentType": job.type.toUpperCase(),
         "hiringOrganization": {
             "@type": "Organization",
-            "name": "Navagatha Tech Pvt. Ltd.",
+            "name": "NAVAGATHA MERCANTILE FLEET MANAGEMENT PVT. LTD.",
             "sameAs": baseUrl,
             "logo": `${baseUrl}/images/logo_navagatha.png`
         },
@@ -225,7 +227,7 @@ export function getJobPostingSchema(job: Job) {
                 "unitText": "YEAR"
             }
         },
-        "industry": "Information Technology",
+        "industry": "Maritime",
         "occupationalCategory": job.department,
         "url": `${baseUrl}/careers/${job.slug}`
     };
@@ -272,23 +274,23 @@ export function getContactPageSchema() {
     return {
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        "name": "Contact Navagatha Tech",
-        "description": "Get in touch with Navagatha Tech for IT services, digital transformation and enterprise solutions",
+        "name": "Contact Navagatha Mercantile",
+        "description": "Get in touch with Navagatha Mercantile Fleet Management for Ship Management and Crewing services",
         "url": `${baseUrl}/contact`,
         "mainEntity": {
             "@type": "Organization",
-            "name": "Navagatha Tech Pvt. Ltd.",
+            "name": "NAVAGATHA MERCANTILE FLEET MANAGEMENT PVT. LTD.",
             "contactPoint": [
                 {
                     "@type": "ContactPoint",
                     "telephone": "+91 22 45705334",
                     "contactType": "customer service",
-                    "email": "info@navagathatech.com",
+                    "email": "info@navagathagroup.com",
                     "availableLanguage": ["en", "Hindi"]
                 },
                 {
                     "@type": "ContactPoint",
-                    "email": "hr@navagathatech.com",
+                    "email": "hr@navagathagroup.com",
                     "contactType": "recruitment",
                     "availableLanguage": ["en", "Hindi"]
                 }

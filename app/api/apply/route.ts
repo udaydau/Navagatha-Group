@@ -33,8 +33,8 @@ export async function POST(req: Request) {
 
     // Send email to HR
     const { error: hrError } = await resend.emails.send({
-      from: "Navagatha Careers <contact@navagathatech.com>",
-      to: ["hr@navagathatech.com"],
+      from: "Navagatha Careers <contact@navagathagroup.com>",
+      to: ["hr@navagathagroup.com"],
       subject: `New Job Application: ${jobTitle} - ${name}`,
       replyTo: email,
       html: `
@@ -51,7 +51,7 @@ export async function POST(req: Request) {
             ${message || "No message provided."}
           </p>
           <hr />
-          <p style="font-size: 12px; color: #64748B;">This application was submitted via navagathatech.com/careers</p>
+          <p style="font-size: 12px; color: #64748B;">This application was submitted via navagathagroup.com/careers</p>
         </div>
       `,
       attachments: [
@@ -69,13 +69,13 @@ export async function POST(req: Request) {
 
     // Send confirmation email to Applicant
     const { error: applicantError } = await resend.emails.send({
-      from: "Navagatha Tech <no_reply@navagathatech.com>",
+      from: "Navagatha Group <no_reply@navagathagroup.com>",
       to: [email],
-      subject: `Application Received: ${jobTitle} at Navagatha Tech`,
+      subject: `Application Received: ${jobTitle} at Navagatha Group`,
       html: `
         <div style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #0F172A;">Hello ${name},</h2>
-          <p>Thank you for your interest in the <strong>${jobTitle}</strong> position at Navagatha Tech Pvt. Ltd.</p>
+          <p>Thank you for your interest in the <strong>${jobTitle}</strong> position at Navagatha Group Pvt. Ltd.</p>
           <p>We've successfully received your application and your CV. Our recruitment team is currently reviewing your profile to see if there's a good match.</p>
           <div style="background: #F8FAFC; padding: 20px; border-radius: 12px; border: 1px solid #E2E8F0; margin: 25px 0;">
             <p style="margin: 0; font-size: 14px; color: #64748B;">Applied for:</p>
@@ -85,11 +85,11 @@ export async function POST(req: Request) {
           <p>We appreciate the time you took to apply and wish you the best of luck!</p>
           <br />
           <p>Best Regards,</p>
-          <p><strong>Team Navagatha</strong><br />Navagatha Tech Pvt. Ltd.</p>
+          <p><strong>Team Navagatha</strong><br />Navagatha Group Pvt. Ltd.</p>
           <hr style="border: none; border-top: 1px solid #EEE; margin: 30px 0;" />
           <p style="font-size: 11px; color: #999; text-align: center;">
             This is an auto-generated email. Please do not reply.<br />
-            Andheri (W), Mumbai, India | <a href="https://www.navagathatech.com">navagathatech.com</a>
+            Andheri (W), Mumbai, India | <a href="https://www.navagathagroup.com">navagathagroup.com</a>
           </p>
         </div>
       `,

@@ -9,7 +9,7 @@ export async function PATCH(
     const session = await getSession();
     const { id } = await params;
 
-    if (!session || session.email !== "hr@navagathatech.com") {
+    if (!session || session.email !== "hr@navagathagroup.com") {
         return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 
@@ -37,7 +37,7 @@ export async function DELETE(
     const session = await getSession();
     const { id } = await params;
 
-    if (!session || session.email !== "hr@navagathatech.com") {
+    if (!session || session.email !== "hr@navagathagroup.com") {
         return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 

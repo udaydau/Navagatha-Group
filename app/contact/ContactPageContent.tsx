@@ -113,7 +113,7 @@ function ContactForm() {
                             <MapPin size={24} />
                         </div>
                         <div className="text-gray-700 leading-relaxed text-lg">
-                            <p className="font-bold text-primary mb-2">Navagatha Tech Pvt. Ltd.</p>
+                            <p className="font-bold text-primary mb-2">Navagatha Group Pvt. Ltd.</p>
                             <p>
                                 Office No. 112, A Wing, 1st Floor,<br />
                                 Crystal Plaza Premises<br />
@@ -227,7 +227,7 @@ function ContactForm() {
                             {status === "error" && (
                                 <div className="mb-8 p-5 bg-red-50 text-red-600 rounded-2xl text-sm font-bold border border-red-100 flex gap-3 items-center">
                                     <div className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
-                                    {errorMessage || "Error processing request. Please try again or email info@navagathatech.com"}
+                                    {errorMessage || "Error processing request. Please try again or email info@navagathagroup.com"}
                                 </div>
                             )}
 
