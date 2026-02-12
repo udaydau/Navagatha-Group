@@ -22,7 +22,7 @@ export function Footer() {
                             </div>
                         </Link>
                         <p className="text-gray-300 text-sm leading-relaxed text-justify max-w-sm">
-                            WE NAVAGATHA always believe in delivering best in all of its services . one of our core service i.e. SHIP MANAGEMENT. Our ship management services include technical management, crew management to serve the marine and offshore industry by providing quality work and reliable marine personnel.
+                            Navagatha Group always believe in delivering best in all of its services . one of our core service i.e. SHIP MANAGEMENT. Our ship management services include technical management, crew management to serve the marine and offshore industry by providing quality work and reliable marine personnel.
                         </p>
                         <div className="flex gap-4 justify-center">
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-[#1877F2] p-2 rounded-full hover:scale-110 transition-transform">
