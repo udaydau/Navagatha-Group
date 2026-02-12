@@ -48,7 +48,7 @@ export function getOrganizationSchema() {
         "slogan": "Premier Ship Management and Crewing Services",
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+91 22 45705334",
+            "telephone": "+91-9699024245",
             "contactType": "customer service",
             "email": "info@navagathagroup.com",
             "availableLanguage": ["en", "Hindi"],
@@ -56,10 +56,10 @@ export function getOrganizationSchema() {
         },
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Office No. 112, A Wing, 1st Floor, Crystal Plaza Premises Co-operative Society Ltd., New Link Road, Opposite Infinity Mall",
-            "addressLocality": "Andheri (West)",
+            "streetAddress": "Office. 604, Reliable Business Centre, Near Heera Panna Mall, Oshiwara, Anand Nagar, Andheri West",
+            "addressLocality": "Andheri West",
             "addressRegion": "Maharashtra",
-            "postalCode": "400053",
+            "postalCode": "400102",
             "addressCountry": "IN"
         },
         "geo": {
@@ -283,7 +283,7 @@ export function getContactPageSchema() {
             "contactPoint": [
                 {
                     "@type": "ContactPoint",
-                    "telephone": "+91 22 45705334",
+                    "telephone": "+91-9699024245",
                     "contactType": "customer service",
                     "email": "info@navagathagroup.com",
                     "availableLanguage": ["en", "Hindi"]

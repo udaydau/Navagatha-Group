@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         "Navagatha Mercantile Jobs",
         "Merchant Navy Jobs",
         "Ship Management Careers",
-        "Join Navagatha Group",
+        "Join Navagatha",
         "Maritime Jobs Mumbai"
     ],
     openGraph: {

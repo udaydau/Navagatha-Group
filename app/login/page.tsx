@@ -124,7 +124,7 @@ export default function LoginPage() {
 
                                     <button
                                         disabled={loading}
-                                        className="w-full py-4 bg-primary text-white font-bold rounded-2xl flex items-center justify-center gap-2 hover:bg-primary/95 transition-all shadow-xl shadow-primary/20 disabled:opacity-70"
+                                        className="w-full py-4 bg-[#0B1C3E] text-white font-bold rounded-2xl flex items-center justify-center gap-2 hover:bg-[#0B1C3E]/95 transition-all shadow-xl shadow-[#0B1C3E]/20 disabled:opacity-70"
                                     >
                                         {loading ? <Loader2 className="animate-spin" size={20} /> : "Send OTP"}
                                         {!loading && <ArrowRight size={20} />}
@@ -163,7 +163,7 @@ export default function LoginPage() {
                                     <div className="space-y-3">
                                         <button
                                             disabled={loading}
-                                            className="w-full py-4 bg-primary text-white font-bold rounded-2xl flex items-center justify-center gap-2 hover:bg-primary/95 transition-all shadow-xl shadow-primary/20 disabled:opacity-70"
+                                            className="w-full py-4 bg-[#0B1C3E] text-white font-bold rounded-2xl flex items-center justify-center gap-2 hover:bg-[#0B1C3E]/95 transition-all shadow-xl shadow-[#0B1C3E]/20 disabled:opacity-70"
                                         >
                                             {loading ? <Loader2 className="animate-spin" size={20} /> : "Verify & Login"}
                                         </button>

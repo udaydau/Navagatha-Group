@@ -28,12 +28,12 @@ export async function POST(req: Request) {
         const { error } = await resend.emails.send({
             from: "Navagatha Auth <no_reply@navagathagroup.com>",
             to: [email],
-            subject: "Your Login OTP - Navagatha Group",
+            subject: "Your Login OTP - Navagatha",
             html: `
         <div style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #0F172A;">Login Verification</h2>
           <p>Hello,</p>
-          <p>You requested a login code for the Navagatha Group employee portal.</p>
+          <p>You requested a login code for the Navagatha employee portal.</p>
           <div style="background: #F8FAFC; padding: 25px; border-radius: 12px; border: 1px solid #E2E8F0; margin: 30px 0; text-align: center;">
             <p style="margin: 0; font-size: 14px; color: #64748B;">Your 6-digit verification code is:</p>
             <p style="margin: 10px 0 0; font-weight: bold; font-size: 36px; color: #0F172A; letter-spacing: 8px;">${otp}</p>

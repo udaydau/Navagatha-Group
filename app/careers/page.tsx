@@ -57,7 +57,7 @@ export default async function CareersPage() {
         <div className="min-h-screen bg-background font-sans">
             <Header />
 
-            <section className="pt-40 pb-20 bg-primary text-white relative overflow-hidden">
+            <section className="pt-40 pb-20 bg-[#0B1C3E] text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent skew-x-12 translate-x-1/2" />
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="mb-8">
@@ -176,7 +176,7 @@ export default async function CareersPage() {
                                         <div className="flex-shrink-0">
                                             <Link
                                                 href={`/careers/${job.slug}`}
-                                                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-bold rounded-full group-hover:bg-secondary group-hover:text-primary transition-all"
+                                                className="inline-flex items-center gap-2 px-8 py-4 bg-[#0B1C3E] text-white font-bold rounded-full group-hover:bg-secondary group-hover:text-[#0B1C3E] transition-all"
                                             >
                                                 View Rank <ArrowRight size={18} />
                                             </Link>
@@ -202,7 +202,7 @@ export default async function CareersPage() {
                         </p>
                         <Link
                             href="/careers/apply"
-                            className="px-10 py-5 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-xl shadow-primary/20"
+                            className="px-10 py-5 bg-[#0B1C3E] text-white font-bold rounded-full hover:bg-[#0B1C3E]/90 transition-all shadow-xl shadow-[#0B1C3E]/20"
                         >
                             General Application
                         </Link>

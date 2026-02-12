@@ -109,7 +109,7 @@ export default async function JobDescriptionPage({ params }: { params: Promise<{
                                     <p className="text-sm text-foreground-muted mb-8">Submit your application today and join our visionary team.</p>
                                     <Link
                                         href={`/careers/apply?job=${encodeURIComponent(job.title)}`}
-                                        className="w-full flex items-center justify-center gap-3 py-5 bg-primary text-white font-extrabold rounded-2xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/20"
+                                        className="w-full flex items-center justify-center gap-3 py-5 bg-[#0B1C3E] text-white font-extrabold rounded-2xl hover:bg-[#0B1C3E]/90 transition-all shadow-xl shadow-[#0B1C3E]/20"
                                     >
                                         Apply for this Job <ArrowRight size={20} />
                                     </Link>

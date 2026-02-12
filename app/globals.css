@@ -1,23 +1,28 @@
 @import "tailwindcss";
 
-  /* Brand Colors */
-  --primary: #0B1C3E;    /* Deep Blue from Logo Background */
-  --secondary: #D4AF37;  /* Gold/Yellow from Turtle */
-  --accent: #00B5D8;     /* Cyan/Teal from TECH text */
-  
-  /* Backgrounds */
-  --background: #FFFFFF;
-  --background-alt: #F8FAFC; 
-  --background-hero: #050A18; /* Dark Hero Background */
-  
-  /* Text */
-  --foreground: #1A202C; 
-  --foreground-muted: #4A5568; 
-  --foreground-light: #F7FAFC; /* Light text for dark backgrounds */
-  
-  /* UI Elements */
-  --border: #E2E8F0;
-  --radius: 0.5rem;
+/* Brand Colors */
+--primary: #0B1C3E;
+/* Deep Blue from Logo Background */
+--secondary: #D4AF37;
+/* Gold/Yellow from Turtle */
+--accent: #00B5D8;
+/* Cyan/Teal from TECH text */
+
+/* Backgrounds */
+--background: #FFFFFF;
+--background-alt: #F8FAFC;
+--background-hero: #050A18;
+/* Dark Hero Background */
+
+/* Text */
+--foreground: #1A202C;
+--foreground-muted: #4A5568;
+--foreground-light: #F7FAFC;
+/* Light text for dark backgrounds */
+
+/* UI Elements */
+--border: #E2E8F0;
+--radius: 0.5rem;
 
 @theme inline {
   --color-primary: var(--primary);
@@ -36,4 +41,40 @@ body {
   color: var(--foreground);
   font-family: var(--font-outfit), sans-serif;
   overflow-x: hidden;
+}
+
+/* Custom Animations for Hero Section */
+@keyframes gradient-x {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+/* Background Position Utilities for Gradient Buttons */
+.bg-size-200 {
+  background-size: 200%;
+}
+
+.bg-pos-0 {
+  background-position: 0%;
+}
+
+.bg-pos-100 {
+  background-position: 100%;
+}
+
+/* Delay Animation Utility */
+.delay-1000 {
+  animation-delay: 1s;
 }

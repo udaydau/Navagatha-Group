@@ -72,7 +72,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
                         {study.title}
                     </h1>
 
-                    <div className="p-8 bg-primary text-white rounded-[40px] mb-12 shadow-2xl relative overflow-hidden">
+                    <div className="p-8 bg-[#0B1C3E] text-white rounded-[40px] mb-12 shadow-2xl relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-[80px]" />
                         <div className="relative z-10">
                             <h2 className="text-xl font-bold mb-4 text-secondary">The Challenge & Outcome</h2>

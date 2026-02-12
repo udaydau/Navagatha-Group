@@ -93,7 +93,7 @@ export function CapabilitiesSection() {
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
                             className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all ${activeTab === tab.id
-                                ? 'bg-primary text-white shadow-xl scale-105'
+                                ? 'bg-[#0B1C3E] text-white shadow-xl scale-105'
                                 : 'bg-white text-primary border border-primary/10 hover:border-primary/30'
                                 }`}
                         >

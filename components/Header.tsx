@@ -17,7 +17,7 @@ const navigation = [
         subItems: [
             { name: "Ship Management", href: "/#services" },
             { name: "Import/Export", href: "/#services" },
-            { name: "Chartering", href: "/#services" },
+            { name: "Agency Services", href: "/#services" },
         ]
     },
     { name: "Careers", href: "/careers" },
@@ -77,18 +77,19 @@ export function Header() {
         <header
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white",
-                isScrolled ? "shadow-md py-2 border-b border-gray-100" : "py-4"
+                isScrolled ? "shadow-md py-1 border-b border-gray-100" : "py-2"
             )}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-2 group relative z-[60]">
-                    <div className="relative h-10 md:h-14 w-[180px] md:w-[380px] transition-all">
+                <Link href="/" className="flex items-center gap-3 group relative z-[60] transition-transform hover:scale-[1.02]">
+                    <div className="relative h-10 w-[180px] md:h-16 md:w-[320px]">
                         <Image
-                            src="/images/logo_navagatha.png"
+                            src="/images/navagatha_logo_final.png"
                             alt="Navagatha Mercantile Fleet Management"
                             fill
                             className="object-contain object-left"
                             priority
+                            quality={100}
                         />
                     </div>
                 </Link>
@@ -206,7 +207,7 @@ export function Header() {
 
                     <Link
                         href="/contact"
-                        className="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-95"
+                        className="px-5 py-2.5 bg-[#0B1C3E] text-white text-sm font-semibold rounded-full hover:bg-[#0B1C3E]/90 transition-all shadow-lg shadow-[#0B1C3E]/20 hover:shadow-[#0B1C3E]/30 active:scale-95"
                     >
                         Contact Us
                     </Link>
@@ -332,7 +333,7 @@ export function Header() {
                         >
                             <Link
                                 href="/contact"
-                                className="w-full text-center px-8 py-5 bg-primary text-white text-xl font-bold rounded-2xl flex items-center justify-center gap-3 shadow-2xl shadow-primary/20"
+                                className="w-full text-center px-8 py-5 bg-[#0B1C3E] text-white text-xl font-bold rounded-2xl flex items-center justify-center gap-3 shadow-2xl shadow-[#0B1C3E]/20"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 Contact Us <ArrowRight size={20} />

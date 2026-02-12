@@ -133,7 +133,7 @@ export default function ExpertisePage() {
                     </section>
 
                     {/* Vessel Expertise Grid */}
-                    <section className="py-24 bg-primary text-white rounded-[60px] relative overflow-hidden mb-32">
+                    <section className="py-24 bg-[#0B1C3E] text-white rounded-[60px] relative overflow-hidden mb-32">
                         <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 translate-x-1/2" />
                         <div className="container px-12 relative z-10">
                             <div className="max-w-3xl mb-16">
@@ -173,7 +173,7 @@ export default function ExpertisePage() {
                         <div className="flex flex-wrap justify-center gap-6">
                             <Link
                                 href="/contact"
-                                className="px-10 py-5 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 flex items-center gap-2"
+                                className="px-10 py-5 bg-[#0B1C3E] text-white font-bold rounded-full hover:bg-[#0B1C3E]/90 transition-all shadow-xl shadow-[#0B1C3E]/20 flex items-center gap-2"
                             >
                                 Contact Us <ArrowRight size={20} />
                             </Link>

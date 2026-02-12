@@ -223,7 +223,7 @@ export default function JobEditor({ params }: { params?: Promise<{ id: string }>
                             <div className="pt-10">
                                 <button
                                     disabled={saving}
-                                    className="w-full py-5 bg-primary text-white font-extrabold rounded-2xl flex items-center justify-center gap-3 hover:bg-primary/95 transition-all shadow-2xl shadow-primary/20 disabled:opacity-70"
+                                    className="w-full py-5 bg-[#0B1C3E] text-white font-extrabold rounded-2xl flex items-center justify-center gap-3 hover:bg-[#0B1C3E]/95 transition-all shadow-2xl shadow-[#0B1C3E]/20 disabled:opacity-70"
                                 >
                                     {saving ? <Loader2 className="animate-spin" size={20} /> : <Save size={20} />}
                                     {isEditing ? "Save Changes" : "Publish Job Posting"}

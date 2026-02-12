@@ -99,7 +99,7 @@ function ApplicationForm() {
                 </p>
                 <Link
                     href="/careers"
-                    className="px-10 py-5 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-xl shadow-primary/20"
+                    className="px-10 py-5 bg-[#0B1C3E] text-white font-bold rounded-full hover:bg-[#0B1C3E]/90 transition-all shadow-xl shadow-[#0B1C3E]/20"
                 >
                     Back to Careers
                 </Link>
@@ -219,7 +219,7 @@ function ApplicationForm() {
                 <button
                     type="submit"
                     disabled={status === "submitting"}
-                    className="w-full py-5 bg-primary text-white font-extrabold rounded-full hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                    className="w-full py-5 bg-[#0B1C3E] text-white font-extrabold rounded-full hover:bg-[#0B1C3E]/90 transition-all shadow-xl shadow-[#0B1C3E]/20 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-3"
                 >
                     {status === "submitting" ? (
                         <div className="w-6 h-6 border-4 border-white/30 border-t-white rounded-full animate-spin" />
