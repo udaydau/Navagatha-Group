@@ -2,12 +2,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { getServiceSchema, getFAQPageSchema } from "@/lib/schema";
 import { getCaseStudies } from "@/lib/case-studies";
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { ServicesSection } from "@/components/ServicesSection";
 import { ClientMotionWrapper } from "@/components/ClientMotionWrapper";
-import { WaterBackground } from "@/components/WaterBackground";
+import { HeroMaritime } from "@/components/HeroMaritime";
 
 const faqs = [
   {
@@ -66,106 +66,7 @@ export default async function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center overflow-hidden">
-        {/* Enhanced Background with Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1C3E] via-[#1a3a5c] to-[#0d2847] z-0"></div>
-
-        {/* Container Ship Background Image */}
-        <div className="absolute inset-0 z-[1]">
-          <Image
-            src="/container-ship.png"
-            alt="Container Ship"
-            fill
-            className="object-cover opacity-20 mix-blend-overlay"
-            priority
-          />
-        </div>
-
-        <WaterBackground />
-
-        {/* Animated Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1C3E]/80 via-transparent to-[#0B1C3E]/40 z-[1]"></div>
-
-        {/* Decorative Elements */}
-        <div className="absolute top-20 right-20 w-72 h-72 bg-secondary/10 rounded-full blur-3xl animate-pulse z-[1]"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-1000 z-[1]"></div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <ClientMotionWrapper
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            <div className="text-center max-w-6xl mx-auto">
-              {/* Enhanced Title with Gradient Text */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.15] tracking-tight">
-                <span className="block mb-1 bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
-                  NAVAGATHA MERCANTILE
-                </span>
-                <span className="block bg-gradient-to-r from-secondary via-yellow-300 to-secondary bg-clip-text text-transparent animate-gradient-x drop-shadow-2xl">
-                  FLEET MANAGEMENT PVT. LTD.
-                </span>
-                <span className="block mt-4 text-lg md:text-xl font-bold tracking-[0.2em] text-white/90">
-                  <span className="px-4 py-1.5 border border-white/20 rounded-full bg-white/5 backdrop-blur-sm">
-                    RPSL-MUM-503
-                  </span>
-                </span>
-              </h1>
-
-              {/* Enhanced Subtitle */}
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-100 mb-10 max-w-4xl mx-auto leading-relaxed font-light tracking-wide">
-                <span className="font-semibold text-white">Premier Ship Management</span> and Crewing Excellence
-              </p>
-
-              {/* Modern CTA Buttons */}
-              <div className="flex flex-col sm:flex-row justify-center gap-5 mb-12">
-                <Link
-                  href="/careers"
-                  className="group relative px-10 py-4 bg-gradient-to-r from-secondary via-yellow-400 to-secondary bg-size-200 bg-pos-0 hover:bg-pos-100 text-primary font-bold text-base rounded-full transition-all duration-500 shadow-2xl shadow-secondary/30 hover:shadow-secondary/50 hover:scale-105 active:scale-95 flex items-center justify-center gap-3 overflow-hidden"
-                >
-                  <span className="relative z-10">Find Your Career at Sea</span>
-                  <ArrowRight size={20} className="relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </Link>
-
-                <Link
-                  href="/#services"
-                  className="group px-10 py-4 bg-white/10 backdrop-blur-xl text-white border-2 border-white/30 font-bold text-base rounded-full hover:bg-white/20 hover:border-white/50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 flex items-center justify-center gap-3"
-                >
-                  <span>Explore Our Services</span>
-                  <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
-                </Link>
-              </div>
-
-              {/* Trust Indicators */}
-              <div className="flex flex-wrap justify-center gap-6 text-white/80">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={18} className="text-secondary" />
-                  <span className="text-sm font-medium">DG Shipping Licensed</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={18} className="text-secondary" />
-                  <span className="text-sm font-medium">ISO Certified</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={18} className="text-[#D4AF37]" />
-                  <span className="text-sm font-medium">Global Operations</span>
-                </div>
-              </div>
-            </div>
-          </ClientMotionWrapper>
-        </div>
-
-        {/* Enhanced Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10">
-          <div className="flex flex-col items-center gap-2 animate-bounce">
-            <span className="text-white/60 text-xs font-semibold tracking-widest uppercase">Scroll Down</span>
-            <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center p-1 shadow-lg">
-              <div className="w-1.5 h-3 bg-[#D4AF37] rounded-full animate-pulse"></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroMaritime />
 
       {/* About Section */}
       <section id="about" className="py-24 bg-white relative">
@@ -188,7 +89,7 @@ export default async function Home() {
             >
               <div className="space-y-6 text-lg text-[#4A5568] leading-relaxed text-justify">
                 <p>
-                  We Navagatha has more than decade Experience in the shipping industry as a Ship Management and Crewing company in Mumbai India & with Indian shipping ministry license no MUM-RPSL-503. we offer an extensive range of services to ship owners and ship managers, wherever in the world they are located. Covering full management, technical management and crew management, we offer our clients the core support they need to operate and safeguard their vessels and achieve commercial success.
+                  Navagatha Mercantile Fleet Management Pvt. Ltd. has more than decade Experience in the shipping industry as a Ship Management and Crewing company in Mumbai India & with Indian shipping ministry license no MUM-RPSL-503. we offer an extensive range of services to ship owners and ship managers, wherever in the world they are located. Covering full management, technical management and crew management, we offer our clients the core support they need to operate and safeguard their vessels and achieve commercial success.
                 </p>
                 <p>
                   Successful companies are unique and their business models vary. At Navagatha excellence is our priority, Our ability to build and sustain working relationships is supported by an innovative approach, the efficient use of modern technology, and a passionate team of people dedicated to delivering client satisfaction and excellence in all marine services.

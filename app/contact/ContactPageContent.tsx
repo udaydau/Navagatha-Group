@@ -121,10 +121,13 @@ function ContactForm() {
                         <div className="space-y-4 text-gray-600 leading-relaxed pl-2 border-l-2 border-[#D4AF37]/20">
                             <p className="font-bold text-[#0B1C3E]">Navagatha Mercantile Fleet Management Pvt. Ltd.</p>
                             <p>
-                                Office. 604, Reliable Business Centre,<br />
-                                Near Heera Panna Mall, Oshiwara,<br />
-                                Anand Nagar, Andheri West,<br />
-                                Mumbai, Maharashtra 400102
+                                Office No. 112, A Wing, 1st Floor,<br />
+                                Crystal Plaza Premises<br />
+                                Co-operative Society Ltd.,<br />
+                                New Link Road,<br />
+                                Opposite Infinity Mall,<br />
+                                Andheri (West),<br />
+                                Mumbai 400053, India.
                             </p>
                         </div>
                     </div>

@@ -1,0 +1,28 @@
+
+> navagatha-web@0.1.0 dev
+> next dev -p 3000
+
+   ▲ Next.js 15.1.9
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.8:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1781ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3s (1516 modules)
+ GET / 200 in 3602ms
+ ○ Compiling /api/auth/session ...
+ ✓ Compiled /api/auth/session in 808ms (811 modules)
+ ✓ Compiled in 388ms (723 modules)
+ GET /api/auth/session 200 in 1074ms
+ GET /manifest.webmanifest 200 in 1493ms
+ GET / 200 in 368ms
+ GET /manifest.webmanifest 200 in 17ms
+ GET /api/auth/session 200 in 16ms
+ ✓ Compiled in 1373ms (1625 modules)
+ GET / 200 in 165ms
+ GET /manifest.webmanifest 200 in 24ms
+ GET / 200 in 317ms
+ GET /manifest.webmanifest 200 in 18ms
+ GET /api/auth/session 200 in 38ms

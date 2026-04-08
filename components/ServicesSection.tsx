@@ -81,6 +81,7 @@ export function ServicesSection() {
     const [activeTab, setActiveTab] = useState('management');
     const [activeSubTab, setActiveSubTab] = useState('copper_cathode');
     const [isCharteringModalOpen, setIsCharteringModalOpen] = useState(false);
+    const [isShipMgmtModalOpen, setIsShipMgmtModalOpen] = useState(false);
 
     const commodities = [
         { id: 'copper_cathode', label: 'Copper Cathode' },
@@ -141,10 +142,15 @@ export function ServicesSection() {
                             <ServiceCard
                                 icon={Ship}
                                 title="Ship Management"
-                                desc="WE NAVAGATHA Mercantile Fleet Management always believe in delivering best in all of its services.one of our core service i.e. SHIP MANAGEMENT. Our ship management services include technical management, crew management to serve the marine and offshore industry."
+                                desc="Navagatha Mercantile Fleet Management delivers end-to-end ship management with technical, crew, commercial, and financial/administrative oversight."
                                 color="primary"
-                                points={["Technical Management", "Crew Management", "Marine Industry", "Offshore Industry"]}
-                                link="#"
+                                points={[
+                                    "Technical Management",
+                                    "Crew Management",
+                                    "Commercial Management",
+                                    "Financial & Administrative Management"
+                                ]}
+                                onClick={() => setIsShipMgmtModalOpen(true)}
                             />
                             <ServiceCard
                                 icon={Navigation}
@@ -409,6 +415,113 @@ export function ServicesSection() {
                                         <p className="text-[#4A5568] leading-relaxed">
                                             Clients expect smooth operation and optimum utilization of vessels in accordance with Charter Party provisions. In order to give clients the best services, our concerned operation departments (Technical and Commercial) are in constant contact with the vessels, various agencies, and clients to ensure operations are executed as per expectations.
                                         </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
+
+            {/* Ship Management Details Modal */}
+            <AnimatePresence>
+                {isShipMgmtModalOpen && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setIsShipMgmtModalOpen(false)}
+                            className="fixed inset-0 bg-[#0B1C3E]/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-6"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            className="fixed inset-0 m-auto w-full max-w-4xl h-fit max-h-[90vh] bg-white rounded-3xl shadow-2xl z-[60] overflow-hidden flex flex-col"
+                        >
+                            <div className="bg-[#0B1C3E] p-6 md:p-8 flex items-center justify-between sticky top-0">
+                                <div>
+                                    <h4 className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs mb-2">Service Details</h4>
+                                    <h3 className="text-2xl md:text-3xl font-bold text-white">Ship Management</h3>
+                                </div>
+                                <button
+                                    onClick={() => setIsShipMgmtModalOpen(false)}
+                                    className="p-2 hover:bg-white/10 rounded-full transition-colors text-white"
+                                >
+                                    <X size={24} />
+                                </button>
+                            </div>
+
+                            <div className="p-6 md:p-8 overflow-y-auto custom-scrollbar">
+                                <div className="space-y-10">
+                                    <div>
+                                        <h5 className="text-[#0B1C3E] font-bold text-xl mb-4">1. Technical Management</h5>
+                                        <ul className="space-y-2">
+                                            {[
+                                                "Maintenance and repairs",
+                                                "Dry docking supervision",
+                                                "Machinery and equipment upkeep",
+                                                "Compliance with maritime regulations (e.g., International Maritime Organization standards)",
+                                                "Safety management systems"
+                                            ].map((text, i) => (
+                                                <li key={i} className="flex items-start gap-3 text-[#4A5568]">
+                                                    <CheckCircle2 size={18} className="text-[#D4AF37] mt-0.5" />
+                                                    <span className="text-sm font-medium leading-relaxed">{text}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h5 className="text-[#0B1C3E] font-bold text-xl mb-4">2. Crew Management</h5>
+                                        <ul className="space-y-2">
+                                            {[
+                                                "Recruiting officers and crew",
+                                                "Training and certification",
+                                                "Payroll and contracts",
+                                                "Ensuring compliance with labor conventions (like the Maritime Labour Convention)"
+                                            ].map((text, i) => (
+                                                <li key={i} className="flex items-start gap-3 text-[#4A5568]">
+                                                    <CheckCircle2 size={18} className="text-[#D4AF37] mt-0.5" />
+                                                    <span className="text-sm font-medium leading-relaxed">{text}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h5 className="text-[#0B1C3E] font-bold text-xl mb-4">3. Commercial Management</h5>
+                                        <ul className="space-y-2">
+                                            {[
+                                                "Chartering and voyage planning",
+                                                "Freight negotiations",
+                                                "Fuel (bunker) purchasing",
+                                                "Managing relationships with charterers"
+                                            ].map((text, i) => (
+                                                <li key={i} className="flex items-start gap-3 text-[#4A5568]">
+                                                    <CheckCircle2 size={18} className="text-[#D4AF37] mt-0.5" />
+                                                    <span className="text-sm font-medium leading-relaxed">{text}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h5 className="text-[#0B1C3E] font-bold text-xl mb-4">4. Financial & Administrative Management</h5>
+                                        <ul className="space-y-2">
+                                            {[
+                                                "Budgeting and cost control",
+                                                "Insurance handling (P&I, hull & machinery)",
+                                                "Accounting and reporting",
+                                                "Regulatory documentation"
+                                            ].map((text, i) => (
+                                                <li key={i} className="flex items-start gap-3 text-[#4A5568]">
+                                                    <CheckCircle2 size={18} className="text-[#D4AF37] mt-0.5" />
+                                                    <span className="text-sm font-medium leading-relaxed">{text}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
